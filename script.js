@@ -20,19 +20,19 @@ function searchPlace() {
 
 
         country1.innerHTML = `
-    <label class="text-white">Country</label>
+    <label class="text-black">Country</label>
     <p class="text-black">${country}</p>
 `
         humidity1.innerHTML = `
-<label class="text-white">Humidity</label>
+<label class="text-black">Humidity</label>
 <p class="text-black">${humidity}%</p>
 `
         wind1.innerHTML = `
-<label class="text-white">Country</label>
+<label class="text-dark">Wind</label>
 <p class="text-black">${wind}kmph</p>
 `
         pressure1.innerHTML = `
-<label class="text-white">Pressure</label>
+<label class="text-dark">Pressure</label>
 <p class="text-black">${pressure}</p>
 `
         temp1.innerHTML = `

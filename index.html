@@ -18,12 +18,12 @@
 
 <body>
   <div class="container w-100 mt-3">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
       <div class=" col1 col-lg-6 col-sm-6 col-md-6 w-50" style="background-image:url(./assets/weather1.jpg);">
-        <h3 id="title" class="text-center text-dark mt-5">WEATHER</h3>
+        <h3 id="title" class="text-center text-dark mt-5">WEATHER UPDATES</h3>
 
         <div>
-          <input id="place" type="text" class="border-0  mt-2 " placeholder="Enter your city">
+          <input id="place" type="text" class="border-0  mt-2" placeholder="Enter your city">
         </div>
 
 
@@ -38,20 +38,29 @@
         <h5 class=" data mt-3 text-dark fw-bold">Weather Details</h5>
        
         <div >
-          <label id="country1" class="text-center text-white mt-4 item">Country</label>
+          <label id="country1" class="text-center text-black fw-bold   mt-4 item">Country</label>
         </div>
         <div>
-          <label id="humidity1" class="text-center text-white mt-4 item">Humidity</label>
+          <label id="humidity1" class="text-center text-black fw-bold  mt-4 item">Humidity</label>
         </div>
         <div>
-          <label id="wind1" class="text-center text-white mt-4 item">wind</label>
+          <label id="wind1" class="text-center text-black fw-bold mt-4 item">wind</label>
         </div>
         <div>
-          <label id="pressure1" class="text-center text-white mt-4 item">Pressure</label>
+          <label id="pressure1" class="text-center text-black fw-bold mt-4 item">Pressure</label>
         </div>
 
       </div>
-      <div class=" col1 col-lg-6 col-md-6 col-sm-6 w-50" style="background-color: antiquewhite;">
+      <!-- <div class=" col1 col-lg-6 col-md-6 col-sm-6 w-50" style="background-color: antiquewhite;">
+
+        <P id="temp1" >Temperature</P>
+        <h4 id="cName" class="me-2">City Name</h4>
+
+      </div> -->
+
+    </div>
+    <div class="row  d-flex justify-content-center mt-4">
+          <div class=" col1 col-lg-6 col-md-6 col-sm-6 w-50 " style="background-image: url(./assets/rainbow1.jpeg);">
 
         <P id="temp1" >Temperature</P>
         <h4 id="cName" class="me-2">City Name</h4>
