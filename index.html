@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container w-100 mt-3">
+    <div class="row">
+      <div class=" col-lg-6 col-sm-6 col-md-6 w-75" style="background-image:url(./assets/parachut.jpg);">
+        <h3 id="title" class="text-center text-white mt-5">WEATHER</h3>
+
+        <div>
+          <input id="place" type="text" class="border-0  mt-2 " placeholder="Enter your city">
+        </div>
+
+
+        <div class="mt-3 d-flex justify-content-start">
+          <button class="btn btn-secondary m-2" onclick="searchPlace()" type="button">Search</button>
+          <button id="refresh" class="m-3 btn btn-dark" onclick="refresh()" type="reset"><i
+              class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+        <hr style="color:black;">
+
+
+        <h5 class=" data mt-3 text-white">Weather Details</h5>
+        <hr style="color:black;">
+        <div >
+          <label id="country1" class="text-center text-white mt-4 item">Country</label>
+        </div>
+        <div>
+          <label id="humidity1" class="text-center text-white mt-4 item">Humidity</label>
+        </div>
+        <div>
+          <label id="wind1" class="text-center text-white mt-4 item">wind</label>
+        </div>
+        <div>
+          <label id="pressure1" class="text-center text-white mt-4 item">Pressure</label>
+        </div>
+
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 w-25" style="background-color: antiquewhite;">
+
+        <P id="temp1">Temperature</P>
+        <h4 id="cName">City Name</h4>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
