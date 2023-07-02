@@ -40,11 +40,11 @@ function searchPlace() {
 
 <span style="font-size:11px">${description}</span>
 </label>
-<p >style="font-size:12px">feels like ${feel}℃</p>
+<p style="font-size:12px;">feels like ${feel}℃</p>
 `
         cName.innerHTML = `
 <h4 style="font-weight:400;">${place}</h4>
-<p style="font-size:13px">${Date()}</p>`
+<p style="font-size:13px;">${Date()}</p>`
 
     }
 }
