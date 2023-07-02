@@ -8,7 +8,7 @@ function searchPlace() {
     function displayData(wData) {
 
         country = wData.sys.country
-        console.log(country);
+       // console.log(country);
         humidity = wData.main.humidity
         wind = wData.wind.speed
         pressure = wData.main.pressure
