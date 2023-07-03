@@ -13,8 +13,9 @@ body{
     background-size: 100% 100%;
     border: 2px solid white; 
     border-radius: .55rem;
+
 } 
-#place{
+#cityname{
   
     height: 40px;
     border: 1px black solid;
@@ -30,8 +31,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 input{
-    /* border: 2px solid black; */
-    /* borer-radius:20px; */
+    
     margin-right: 2rem;
     width: 110px;
 }

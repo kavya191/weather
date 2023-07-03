@@ -1,6 +1,6 @@
 function searchPlace() {
-    place = place.value
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=5fe36b192ffd1c36dffb6752bc1722b2`)
+    cityName = cityname.value
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=5fe36b192ffd1c36dffb6752bc1722b2`)
         .then(data => data.json())
         .then(data => displayData(data))
     console.log(data);
@@ -15,7 +15,7 @@ function searchPlace() {
         temp = eval(wData.main.temp - 273.15).toFixed()
         console.log(temp);
         feel = eval(wData.main.feels_like - 273.15).toFixed()
-        place = wData.name
+        city = wData.name
         description = wData.weather[0].description
 
 
@@ -43,13 +43,13 @@ function searchPlace() {
 <p style="font-size:12px;">feels like ${feel}℃</p>
 `
         cName.innerHTML = `
-<h4 style="font-weight:400;">${place}</h4>
+<h4 style="font-weight:400;">${city}</h4>
 <p style="font-size:13px;">${Date()}</p>`
 
     }
 }
-function refresh() {
-    place.value = ""
+function clearData(){
+    cityname.value = ""
     country1.innerHTML = `
         <p class="text-black">Country</p>`
     humidity1.innerHTML = `
@@ -66,6 +66,13 @@ function refresh() {
 
 
 }
+function myKey(event){
+    if(event.code=="Enter"){
+        searchPlace()
+    }
+
+}
+
 
 
 
