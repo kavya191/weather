@@ -1,9 +1,17 @@
+function myKey(event){
+    x=event.code
+    if(x == "Enter"){
+        console.log(x);
+        searchPlace()
+    }
+
+}
 function searchPlace() {
     cityName = cityname.value
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=5fe36b192ffd1c36dffb6752bc1722b2`)
         .then(data => data.json())
         .then(data => displayData(data))
-    console.log(data);
+    
 
     function displayData(wData) {
 
@@ -13,7 +21,7 @@ function searchPlace() {
         wind = wData.wind.speed
         pressure = wData.main.pressure
         temp = eval(wData.main.temp - 273.15).toFixed()
-        console.log(temp);
+        //console.log(temp);
         feel = eval(wData.main.feels_like - 273.15).toFixed()
         city = wData.name
         description = wData.weather[0].description
@@ -21,33 +29,34 @@ function searchPlace() {
 
         country1.innerHTML = `
     <label class="text-black">Country</label>
-    <p class="text-black">${country}</p>
+    <p class="text-white">${country}</p>
 `
         humidity1.innerHTML = `
 <label class="text-black">Humidity</label>
-<p class="text-black">${humidity}%</p>
+<p class="text-white">${humidity}%</p>
 `
         wind1.innerHTML = `
-<label class="text-dark">Wind</label>
-<p class="text-black">${wind}kmph</p>
+<label class="text-black">Wind</label>
+<p class="text-white">${wind}kmph</p>
 `
         pressure1.innerHTML = `
-<label class="text-dark">Pressure</label>
-<p class="text-black">${pressure}</p>
+<label class="text-black">Pressure</label>
+<p class="text-white">${pressure}</p>
 `
         temp1.innerHTML = `
-<label style="font-size:25px;font-style:bold;font-weight:500;">${temp}℃,
+<label class="text-dark fw-bold" style="font-size:25px;font-style:bold;font-weight:500;">${temp}℃,
 
-<span style="font-size:11px">${description}</span>
+<span class="text-dark fw-bold" style="font-size:15px">${description}</span>
 </label>
-<p style="font-size:12px;">feels like ${feel}℃</p>
+<p class="text-dark fw-bold" style="font-size:15px;">feels like ${feel}℃</p>
 `
         cName.innerHTML = `
-<h4 style="font-weight:400;">${city}</h4>
-<p style="font-size:13px;">${Date()}</p>`
+<h4 class="text-dark fw-bold" style="font-weight:400;">${city}</h4>
+<p class="text-dark fw-bold" style="font-size:15px;">${Date()}</p>`
 
     }
 }
+
 function clearData(){
     cityname.value = ""
     country1.innerHTML = `
@@ -66,12 +75,7 @@ function clearData(){
 
 
 }
-function myKey(event){
-    if(event.code=="Enter"){
-        searchPlace()
-    }
 
-}
 
 
 
