@@ -1,6 +1,6 @@
 body{
    
-    background-image: url("./assets/climate.jpg");
+    background-image: url("https://i.postimg.cc/t4FKMY1z/weather.jpg");
     background-size: 100% 100%;
     display: flex;
     justify-content:center;
@@ -10,9 +10,21 @@ body{
 }
 .col1{
     height: 650px;
+    width: 100%;
     background-size: 100% 100%;
-    border: 2px solid white; 
-    border-radius: .55rem;
+    /* border: 2px solid white;  */
+    /* border-radius: .55rem; */
+ 
+} 
+   
+
+.col2{
+    height: 650px;
+    width: 100%;
+    background-size: 100% 100%;
+    /* border: 2px solid white;  */
+    /* border-radius: .55rem; */
+    
 
 } 
 #cityname{
